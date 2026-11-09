@@ -1,0 +1,5 @@
+.env
+__pycache__/
+history.csv
+users.csv
+model.pkl
