@@ -353,7 +353,7 @@ if menu == "🏠 Home":
 
         )
 
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     with right:
 
@@ -393,7 +393,7 @@ if menu == "🏠 Home":
 
         )
 
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width="stretch")
 
     st.divider()
             # =====================================

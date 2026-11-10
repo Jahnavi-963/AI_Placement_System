@@ -130,7 +130,7 @@ def interview_page():
 
     with col1:
 
-        if st.button("✅ Evaluate", use_container_width=True):
+        if st.button("✅ Evaluate", width="stretch"):
 
             if answer.strip() == "":
 
@@ -170,7 +170,7 @@ def interview_page():
 
     with col2:
 
-        if st.button("➡ Next Question", use_container_width=True):
+        if st.button("➡ Next Question", width="stretch"):
 
             st.session_state.q_index += 1
             st.session_state.time_left = 60
@@ -234,7 +234,7 @@ def interview_page():
 
     st.divider()
 
-    if st.button("🔄 Reset Interview"):
+    if st.button("🔄 Reset Interview", width="stretch"):
 
         st.session_state.score = 0
         st.session_state.attempt = 0

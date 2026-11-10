@@ -30,4 +30,4 @@ def history_page():
     if user_history.empty:
         st.warning("No Prediction History Found for this user.")
     else:
-        st.dataframe(user_history, use_container_width=True)
+        st.dataframe(user_history, width="stretch")

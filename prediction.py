@@ -1,5 +1,4 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
 import pickle
 import datetime
@@ -68,7 +67,19 @@ def prediction_page():
 
         return
 
-    data = np.array([st.session_state.data])
+    data = pd.DataFrame(
+        [st.session_state.data],
+        columns=[
+            "CGPA",
+            "Skills",
+            "Aptitude",
+            "Projects",
+            "Internship",
+            "Communication",
+            "Backlogs",
+            "Hackathon"
+        ]
+    )
 
     probability = model.predict_proba(data)[0][1] * 100
     st.session_state.prediction = probability
